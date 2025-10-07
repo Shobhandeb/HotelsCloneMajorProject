@@ -1,0 +1,102 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+
+<!-- ICON MENU -->
+<div class="icon-menu container my-4 d-flex justify-content-between flex-wrap">
+  <div class="icon-item text-center">
+    <i class="fas fa-tractor fa-2x"></i>
+    <p>Farms</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-bed fa-2x"></i>
+    <p>Rooms</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-mountain fa-2x"></i>
+    <p>Amazing Views</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-city fa-2x"></i>
+    <p>Iconic Cities</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-water fa-2x"></i>
+    <p>Surfing</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-swimming-pool fa-2x"></i>
+    <p>Amazing Pools</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-umbrella-beach fa-2x"></i>
+    <p>Beach</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-home fa-2x"></i>
+    <p>Cabins</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-exclamation fa-2x"></i>
+    <p>OMG!</p>
+  </div>
+  <div class="icon-item text-center">
+    <i class="fas fa-water fa-2x"></i>
+    <p>Lakefront</p>
+  </div>
+  <div class="tax-toggle" style="border: 1px solid black;border-radius: 1rem; height: 4.3rem; padding: 1rem;margin-left: 3rem;">
+    <div class="form-check-reverse form-switch">
+      <input
+      class="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="flexSwitchCheckDefault"
+      >
+      <label class="form-check-label" for="flexSwitchCheckDefault">
+        Display total after taxes
+      </label>
+    </div>
+
+  </div>
+</div>
+     <section class="hero">
+  <h1>Welcome to LuxuryStay</h1>
+  <p>Experience comfort and elegance like never before</p>
+
+</section>
+
+    
+   
+        <div id="pets">
+        <%for(let listing of allListings){ %>
+            
+             <div class="card">
+        <img src="<%=listing.image.url%>"alt="jerry" />
+        <h3><a href="/listings/<%=listing._id%>" style="text-decoration: none;font-weight: bold; color: rgb(62, 139, 255);"><%=listing.title %></a></h3>
+        <p style="font-size: larger;">
+        ₹ <%=listing.price.toLocaleString("en-IN")%> /night
+         <i class="tax-info" style="font-weight: bold; display: none;">&nbsp;&nbsp;+18% GST</i>
+        </p>
+      </div>
+        <% } %>
+        </div>
+  
+        <form method="get" action="/listings/new">
+            <div style="text-align:center; margin-top: 20px;">
+        <button class="btn-primary">+ Create New Listing</button>
+            </div>
+        </form>
+<!-- js for tax toggle  -->
+        <script> 
+          let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+          taxSwitch.addEventListener("click",()=>{
+            let taxInfo = document.getElementsByClassName("tax-info");
+            for(info of taxInfo){
+              if(info.style.display !=="inline"){
+                info.style.display = "inline";
+              }else{
+                info.style.display = "none";
+              }
+            }
+          })
+        </script>
+</body>

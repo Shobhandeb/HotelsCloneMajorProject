@@ -1,0 +1,103 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+<!-- Modern About & Contact Section -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section class="modern-contact d-flex align-items-center justify-content-center py-5">
+  <div class="glass-card text-center p-5">
+    <div class="profile-img mb-4">
+      <img src="https://i.ibb.co/s9m4gVyK/contactpage.jpg" alt="Shobhandeb Adak">
+    </div>
+    <h2 class="fw-bold mb-1">Shobhandeb Adak</h2>
+    <p class="text-light-50 mb-3">3rd Year, Jalpaiguri Government Engineering College</p>
+
+    <div class="d-flex justify-content-center gap-3 mb-4">
+      <a href="mailto:sdadak02@gmail.com" class="contact-link">
+        <i class="fa-solid fa-envelope"></i> sdadak02@gmail.com
+      </a>
+    </div>
+
+    <p class="intro text-light-75 fst-italic">
+      "Life is a series of natural and spontaneous changes. Don't resist them; that only creates sorrow. Let reality be reality. Let things 
+      flow naturally forward in whatever way they like."
+    </p>
+
+    <div class="social-icons mt-4">
+      <a href="https://github.com/Shobhandeb" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/shobhandebadak/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .modern-contact {
+    background: radial-gradient(circle at top left, #00111f, #000);
+    color: white;
+    min-height: 100vh;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.1);
+    max-width: 420px;
+    transition: 0.4s ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(0, 200, 255, 0.25);
+  }
+
+  .profile-img img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 200, 255, 0.5);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.2);
+    transition: 0.4s ease;
+  }
+
+  .profile-img img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 40px rgba(0, 200, 255, 0.35);
+  }
+
+  .contact-link {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .contact-link:hover {
+    color: #66e0ff;
+  }
+
+  .intro {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+  }
+
+  .social-icons a {
+    color: #00bfff;
+    margin: 0 10px;
+    font-size: 1.4rem;
+    transition: 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #66e0ff;
+    transform: scale(1.2);
+  }
+</style>
+
+
+
+
+
+</body>
